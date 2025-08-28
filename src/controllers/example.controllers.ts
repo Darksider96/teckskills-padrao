@@ -7,6 +7,12 @@ class ExampleController
         return res.send('Hello Typescript')
     }
 
+    testError(req: Request, res: Response)
+    {
+        throw new Error('Testando erro');
+        
+    }
+
 }
 
 export { ExampleController };
