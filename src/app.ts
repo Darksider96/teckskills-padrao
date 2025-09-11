@@ -25,4 +25,10 @@ app.use(routes);
 
 app.use(errorHandling);
 
+import { database } from './database/database';
+
+(async () => {
+    console.log(await database.query('select now() as data_atual', []));
+})();
+
 export { app };
